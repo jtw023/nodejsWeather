@@ -94,7 +94,7 @@ app.get('/help/*', (req, res) => {
         info:
             'This help article has been removed, had its name changed, or is temporarily unavailable.',
         route: '/help',
-        page: 'Back to help',
+        page: 'BACK TO HELP',
     });
 });
 
