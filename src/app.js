@@ -7,6 +7,7 @@ const express = require('express');
 const hbs = require('hbs');
 
 const app = express();
+const port = proccess.env.PORT || 3000;
 
 // Defined paths for express config
 const publicDirectoryPath =
@@ -107,6 +108,6 @@ app.get('*', (req, res) => {
 });
 
 // Where to our server should listen to
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server Started...');
 });
