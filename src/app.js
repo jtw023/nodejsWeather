@@ -3,6 +3,7 @@ const location = require('./utils/geocode');
 const weather = require('./utils/weather');
 
 // require statement for outside libraries
+const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
 
@@ -10,14 +11,11 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Defined paths for express config
-const publicDirectoryPath =
-    '/home/jwalters/home/Documents/Play/Udemy/Node.js_Developer_Course/web-server/public';
+const publicDirectoryPath = path.join(__dirname, '../public');
 
-const viewsPath =
-    '/home/jwalters/Documents/Play/Udemy/Node.js_Developer_Course/web-server/templates/views';
+const viewsPath = path.join(__dirname, '../templates/views');
 
-const partialsPath =
-    '/home/jwalters/Documents/Play/Udemy/Node.js_Developer_Course/web-server/templates/partials';
+const partialsPath = path.join(__dirname, '../templates/partials');
 
 // Setup handlebars engine and views location
 app.set('view engine', 'hbs');
