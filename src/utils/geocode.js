@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const location = (address, callback) => {
-    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
+    const url = `http://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
         address
     )}.json?access_token=pk.eyJ1IjoianR3MDAyMyIsImEiOiJja2NlMTczNTkwMndwMnNwYjZoY3U0M3kzIn0.pJtZhlaf_6dNmpTOnEaPyA&limit=1`;
 
