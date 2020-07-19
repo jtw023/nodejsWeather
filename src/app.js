@@ -29,7 +29,7 @@ app.use(express.static(publicDirectoryPath));
 
 // What to show for the home page
 app.get('', (req, res) => {
-    res.render('index', {
+    res.render('/index', {
         title: 'Weather App',
         name: 'Jordan Walters',
     });
