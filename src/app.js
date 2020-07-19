@@ -92,7 +92,7 @@ app.get('/products', (req, res) => {
 app.get('/help/*', (req, res) => {
     res.render('error', {
         info:
-            'This help article has been removed, had its name changed, or is temporarily unavailable.',
+            'This help article has been removed, had its name changed, or is otherwise temporarily unavailable.',
         route: '/help',
         page: 'BACK TO HELP',
     });
@@ -101,7 +101,7 @@ app.get('/help/*', (req, res) => {
 app.get('*', (req, res) => {
     res.render('error', {
         info:
-            'The page you are looking for has been removed, had its name changed, or is temporarily unavailable.',
+            'The page you are looking for has been removed, had its name changed, or is otherwise temporarily unavailable.',
         route: '/',
         page: 'HOMEPAGE',
     });
