@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 
 // Defined paths for express config
 const publicDirectoryPath =
-    '/home/jwalters/Documents/Play/Udemy/Node.js_Developer_Course/web-server/public';
+    '/home/jwalters/home/Documents/Play/Udemy/Node.js_Developer_Course/web-server/public';
 
 const viewsPath =
     '/home/jwalters/Documents/Play/Udemy/Node.js_Developer_Course/web-server/templates/views';
