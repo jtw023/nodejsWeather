@@ -9,6 +9,11 @@ const hbs = require('hbs');
 const app = express();
 const port = process.env.PORT || 3000;
 
+process
+    .on('SIGTERM', shutdown('SIGTERM'))
+    .on('SIGINT', shutdown('SIGINT'))
+    .on('uncaughtException', shutdown('uncaughtException'));
+
 // Defined paths for express config
 const publicDirectoryPath =
     '/home/jwalters/Documents/Play/Udemy/Node.js_Developer_Course/web-server/public';
