@@ -1,18 +1,18 @@
 {
-  "name": "web-server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-
-  },
-  "author": "Jordan Walters",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.19.2",
-    "express": "^4.17.1",
-    "hbs": "^4.1.1",
-    "l": "^0.6.0",
-    "path": "^0.12.7"
-  }
+    "name": "web-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node src/app.js"
+    },
+    "author": "Jordan Walters",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.19.2",
+        "express": "^4.17.1",
+        "hbs": "^4.1.1",
+        "l": "^0.6.0",
+        "path": "^0.12.7"
+    }
 }
