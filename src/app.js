@@ -5,6 +5,7 @@ const weather = require('./utils/weather');
 // require statement for outside libraries
 const express = require('express');
 const hbs = require('hbs');
+const http = require('http');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -13,6 +14,23 @@ process
     .on('SIGTERM', shutdown('SIGTERM'))
     .on('SIGINT', shutdown('SIGINT'))
     .on('uncaughtException', shutdown('uncaughtException'));
+
+setInterval(console.log.bind(console, 'tick'), 1000);
+http.createServer((req, res) => res.end('hi')).listen(
+    process.env.PORT || 3000,
+    () => console.log('Listening')
+);
+
+function shutdown(signal) {
+    return (err) => {
+        console.log(`${signal}...`);
+        if (err) console.error(err.stack || err);
+        setTimeout(() => {
+            console.log('...waited 5s, exiting.');
+            process.exit(err ? 1 : 0);
+        }, 5000).unref();
+    };
+}
 
 // Defined paths for express config
 const publicDirectoryPath =
