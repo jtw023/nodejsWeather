@@ -13,7 +13,9 @@ h1 {
 }
 
 p {
+    text-align: center;
     display: grid;
+    justify-content: center;
     grid-template-columns: auto;
     font-weight: bold;
     height: 56vh;
