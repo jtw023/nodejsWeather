@@ -14,9 +14,6 @@ const weather = (lat, long, callback) => {
                 callback(undefined, {
                     description: res.data.current.weather_descriptions[0],
                     temperature: res.data.current.temperature,
-                    feelsLike: res.data.current.feelslike,
-                    precipitaion: res.data.current.precip,
-                    humidity: res.data.current.humidity,
                     lastObservedTime: res.data.current.observation_time,
                     location: `${res.data.location.name}, ${res.data.location.region}, ${res.data.location.country}`,
                 });
